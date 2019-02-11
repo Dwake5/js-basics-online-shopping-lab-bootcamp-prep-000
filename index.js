@@ -9,9 +9,12 @@ function setCart(c) {
   return cart;
 }
 
-function addToCart(item) {
-  price = Math.floor(Math.random()*100)+1
-  cart.push(`itemName: ${item}, itemPrice: ${price}`)
+function addToCart (item) {
+  var price = Math.floor(100*(Math.random()));
+  var itemObj = {[item]: price};
+  cart.push(itemObj);
+  console.log(`${item} has been added to your cart.`);
+  return cart;
 }
 
 function viewCart() {
